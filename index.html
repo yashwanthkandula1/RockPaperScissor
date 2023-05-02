@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>R-P-S-Game</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+    <!-- code for score board -->
+    <div class="container" id="score-tite-box">
+        <div class="row justify-content-center">
+            <div class="col-8 mt-5" id="score-box">
+                <div class="row">
+                    <div class="col-6 me-auto p-3">
+                        <div id="title">ROCK</div> <div id="title">PAPER</div> <div id="title">SCISSORS</div>
+                    </div>
+                    <div class="col-md-3 col-xl-2 text-center p-3">
+                        <div class="c-score ">
+                            <div id="c-title">COMPUTER</div>
+                            <div id="c-title">SCORE</div>
+                            <div id="comp-score">0</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xl-2 text-center p-3">
+                        <div class="p-score ">
+                            <div id="p-title">YOUR</div>
+                            <div id="p-title">SCORE</div>
+                            <div id="player-score">0</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- code for rock paper and scissor -->
+    
+
+        <div id="triangle-set">
+            <div>
+                <div id="triangle-btns">
+                    <div id="makecenter">
+
+                    </div>
+                    <div id="line1">
+
+                    </div>
+                    <div id="line2">
+                        
+                    </div>
+                    <div id="line3">
+                        
+                    </div>
+                    
+                    <button id="btn-rock" onclick="decision('rock')"></button>
+                    <button id="btn-paper" onclick="decision('paper')"></button>
+                    <button id="btn-scissor" onclick="decision('scissor')"></button>
+                    
+                </div>
+                <!-- <div id="rules-list">
+                    yashwanth
+                </div> -->
+                
+            </div>
+        </div>
+
+
+        <div class="win-loose-box" id="win-loose">
+            <div class="box">
+            
+                <div id="elp-right">
+                    <div class="elipse4-right"></div>
+                    <div class="elipse3-right"></div>
+                    <div class="elipse5-right"></div>
+                </div>
+                <button id="btn-rock-right"></button>
+                <button id="btn-paper-right"></button>
+                <button id="btn-scissor-right"></button>
+                
+                
+                <div id="elp-left">
+                    <div class="elipse4-left"></div>
+                    <div class="elipse3-left"></div>
+                    <div class="elipse5-left"></div>
+                </div>
+                <button id="btn-rock-left"></button>
+                <button id="btn-paper-left"></button>
+                <button id="btn-scissor-left"></button>
+
+                <button id="playagain" onclick="playAgain()">PLAY AGAIN</button>
+                <div class="display" id="result">
+                    
+                </div>
+                <div class="display" id="againstpc">
+                    
+                </div>
+                <div class="display" id="youpicked">
+                    YOU PICKED
+                </div>
+                <div class="display" id="pcpicked">
+                    PC PICKED
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="hurray-box">
+            
+                <img src="images/stars.png" alt="" id="star" >
+                <img src="images/cup.png" alt="" id="cup">
+                <div id="hurray-title">HURRAY!!</div>     
+                <div id="you-won-title">YOU WON THE GAME</div>  
+                <button id="play--again" onclick="playAgainHurray()">PLAY AGAIN</button>   
+                
+                 
+        </div>
+
+        
+        
+        <div id="rules-btn-space">
+            <button id="rules" onclick="openCloseRules()">RULES</button>
+            <button id="next" onclick="hurrayDisplay()">NEXT</button>
+        </div>
+
+        <div id="popup-display">
+            <div id="popup">
+                <h4>Game Rules</h4>
+                <ul>
+                    <li><span>Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
+                    <li><span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span></li>
+                    <li><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</span></li>
+                    <li><span>If both players lay down the same hand, each player lays down another hand</span></li>
+                </ul>
+            </div>
+            <button id="close" onclick="openCloseRules()">X</button>
+        </div>
+
+        <button id="rules-hurray" onclick="openCloseRules()">RULES</button>  
+</body>
+</html>
